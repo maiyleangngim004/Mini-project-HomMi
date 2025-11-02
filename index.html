@@ -1,11 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomMi</title>
+
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch   (run this) -->
+
 </head>
-<body>
-    <img src="https://i.pinimg.com/736x/a8/ae/78/a8ae780f3c146cd2e94a264311df1150.jpg" alt="">
+
+<body class="text-gray-200 backgroud-color">
+
+    <header class=" h-[75px] container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 accents-color rounded-4xl mt-7">
+        <nav class="flex justify-between items-center">
+            <a href="#" class="text-white text-3xl font-bold">HomMi</a>
+
+            <ul class="hidden md:flex items-center space-x-10">
+                <li><a href="#"
+                        class=" nav-link-active underline text-[#524DD3] hover:text-[#524DD3] transition-colors">Home</a>
+                </li>
+                <li><a href="#" class="text-gray-300 hover:text-[#524DD3] transition-colors">Card List</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-[#524DD3] transition-colors">About</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-[#524DD3] transition-colors">Contact</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-[#524DD3] transition-colors">Team</a></li>
+            </ul>
+
+            <a href="#"
+                class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
+                Register now
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in-up">
+                <h2 class="text-white font-bold text-4xl md:text-5xl mt-2 mb-6 leading-tight">
+                    Find Your Perfect <br>
+                    Student Room in <br>
+                    Phnom Penh
+                </h2>
+                <p class="text-gray-300 text-base leading-relaxed mb-6">
+                    We help students discover safe, affordable, and
+                    comfortable rooms near their universities.
+                    Whether you’re new to the city or just looking for
+                    a better place to stay, our platform makes it
+                    easy to compare locations, prices, and facilities—
+                    all in one place.
+                </p>
+
+                <div class="flex">
+                    <a href="#"
+                        class="inline-block secondary-color text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-indigo-700 transition-all duration-300">
+                        Register
+                    </a>
+
+                    <a href="#"
+                        class=" ml-12 inline-block border text-[#524DD3] px-8 py-3 rounded-full font-semibold text-lg hover:text-white transition-all duration-300 ">
+                        Log In
+                    </a>
+                </div>
+            </div>
+
+            <section>
+
+                <img src="https://i.pinimg.com/1200x/e9/67/d4/e967d4169e7ad708384c247314feef13.jpg"
+                    alt="Modern student housing" class="rounded-lg shadow-2xl w-full h-auto object-cover" />
+            </section>
+
+        </div>
+
+         <div class="flex sm:flex-row justify-between mt-4 max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col lg:flex-row md:flex-row xl:flex-row 2xl:flex-row 3xl:flex-row items-center sm:text-center"><i class="fa-regular fa-house text-5xl text-[#524DD3]"></i><p class="text-center normal-title-font-18 leading-relaxed"> <b>500+ </b><br>Room Listed</p></div>
+            <div class="flex flex-col lg:flex-row md:flex-row xl:flex-row 2xl:flex-row 3xl:flex-row items-center sm:text-center"><i class="fa-regular fa-star text-5xl text-[#524DD3]"></i><p class="text-center normal-title-font-18 leading-relaxed"> <b>95% </b><br> Student Satisfaction</p></div>
+            <div class="flex flex-col lg:flex-row md:flex-row xl:flex-row 2xl:flex-row 3xl:flex-row items-center sm:text-center"><i class="fa-solid fa-landmark text-5xl text-[#524DD3]"></i> <p class="text-center normal-title-font-18 leading-snug"> <b>Serving </b> <br>20+ Universities <br> in Phnom Penh</p></div>
+        </div>
+
+
+
+    </main>
+
+    <footer class="mt-24 pb-8">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-white text-2xl font-bold mb-4">Clarity</h3>
+                    <p class="text-gray-400 text-sm mb-2">Cambodia,</p>
+                    <p class="text-gray-400 text-sm mb-2">Phnom Penh</p>
+                    <p class="text-gray-400 text-sm mb-2">Phone: (+855) 12345678</p>
+                    <p class="text-gray-400 text-sm mb-4">Email: rentroom@business.kh.com</p>
+                    <div class="flex space-x-3">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-solid fa-phone-volume fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-telegram fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-linkedin-in fa-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Useful Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">About us</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Service</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of
+                                services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
+                                policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Verified
+                                Listing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Neighborhood
+                                Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Landlord
+                                Connect</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Roommate
+                                Matching</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Popular Areas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Toul Kork</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Toul
+                                Tompong</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Boeung Kak</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Russian
+                                Market</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Doun Penh</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Student Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">How to Rent
+                                Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Student Safety
+                                Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Roommate
+                                F.A.Q</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-classNames">Moving
+                                Checklist</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center text-gray-500 text-xs pt-8 mt-12 border-t border-gray-700/50">
+                Copyright 2025 Rent Room. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
 </body>
+
 </html>
