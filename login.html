@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="backgroud-color-bg text-white">
+
+    <main class="min-h-screen grid grid-cols-1 md:grid-cols-2">
+
+        <div class="hidden md:flex items-center justify-center p-12">
+            <img src="./images/registerlogo.svg" alt="registerlogo" class="w-full max-w-md">
+        </div>
+
+        <div class="flex items-center justify-center p-8 md:p-12">
+
+            <form action="/login" method="POST" class="accents-color-bg p-10 rounded-2xl shadow-2xl w-full max-w-lg">
+
+                <h2 class="normal-title-font-18 description-color font-light">Welcome back to</h2>
+                <h1 class="main-title-font-36 secondary-color-text font-bold mb-8">HomMi</h1>
+
+                <div class="space-y-4 mb-6">
+                    <button type="button"
+                        class="primary-color-bg w-full flex items-center justify-center py-3 rounded-lg hover:opacity-90 transition duration-300">
+                        <img src="https://www.google.com/favicon.ico" alt="Google" class="w-5 h-5 mr-3">
+                        <span class="description-font-14 text-white font-medium">Login with Google</span>
+                    </button>
+                    <button type="button"
+                        class="primary-color-bg w-full flex items-center justify-center py-3 rounded-lg hover:opacity-90 transition duration-300">
+                        <i class="fa-brands fa-facebook-f mr-3" style="color: #1877F2;"></i>
+                        <span class="description-font-14 text-white font-medium">Login with Facebook</span>
+                    </button>
+                </div>
+
+                <div class="flex items-center my-8">
+                    <hr class="flex-grow border-t border-gray-600">
+                    <span class="mx-4 smallest-font-12 description-color">OR</span>
+                    <hr class="flex-grow border-t border-gray-600">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="description-font-14 description-color block font-medium mb-2">Email</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-envelope absolute left-3 top-1/2 -translate-y-1/2 description-color"></i>
+                        <input type="email" id="email" placeholder="example@gmail.com"
+                            class="primary-color-bg placeholder-color w-full border-0 rounded-lg p-3 pl-10 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="description-font-14 description-color block font-medium mb-2">Password</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-lock absolute left-3 top-1/2 -translate-y-1/2 description-color"></i>
+                        <input type="password" id="password" placeholder="••••••••••"
+                            class="primary-color-bg placeholder-color w-full border-0 rounded-lg p-3 pl-10 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        <i class="fa-solid fa-eye absolute right-4 top-1/2 -translate-y-1/2 description-color cursor-pointer password-toggle"></i>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember-me"
+                            class="primary-color-bg h-4 w-4 rounded border-0 text-blue-600 focus:ring-blue-500">
+                        <label for="remember-me" class="ml-2 block smallest-font-12 description-color">Remember me</label>
+                    </div>
+                    <div>
+                        <a href="#" class="smallest-font-12 description-color hover:underline">Forgot Password?</a>
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="secondary-color-bg w-full hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded-lg normal-title-font-18 transition duration-300">
+                    Login
+                </button>
+
+                <div class="text-center mt-6">
+                    <span class="smallest-font-12 description-color">
+                        Don't have an account?
+                        <a href="register.html" class="font-medium text-white hover:underline">Register now</a>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.password-toggle').forEach(icon => {
+            icon.addEventListener('click', () => {
+                const input = icon.previousElementSibling;
+
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

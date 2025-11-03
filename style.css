@@ -1,4 +1,8 @@
-.primary-color{
+body {
+    font-family: 'roboto', sans-serif;
+}
+
+.primary-color-bg {
     background-color: #1F2240;
 }
 .description-color{
@@ -7,37 +11,55 @@
 .text-color{
     color:#D9D9D9
 }
-.secondary-color{
+.secondary-color-bg {
     background-color: #524DD3;
 }
-.accents-color{
+.accents-color-bg {
     background-color: #1B1933;
 }
 .background-color{
     background-color: #05071E;
 }
-.header-font-48{
+
+.hommi-highlight {
+    background-color: #162460;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.secondary-color-text {
+    color: #524DD3;
+}
+
+.header-font-48 {
     font-size: 48px;
     font-family: 'roboto', sans-serif;
 }
-.main-title-font-36{
+.main-title-font-36 {
     font-size: 36px;
     font-family: 'roboto', sans-serif;
 }
-.second-title-font-40{
+.second-title-font-40 {
     font-size: 40px;
     font-family: 'roboto', sans-serif;
 }
-.normal-title-font-18{
+.normal-title-font-18 {
     font-size: 18px;
     font-family: 'roboto', sans-serif;
 }
-.description-font-14{
+.description-font-14 {
     font-size: 14px;
     font-family: 'roboto', sans-serif;
     color:#C3C7CB
 }
-.smallest-font-12{
+.smallest-font-12 {
     font-size: 12px;
     font-family: 'roboto', sans-serif;
+}
+
+.placeholder-color::placeholder {
+    color: #C3C7CB;
+    opacity: 0.7;
 }
