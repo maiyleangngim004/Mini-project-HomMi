@@ -14,33 +14,64 @@
     
 
 </head>
-<body>
-    <header class="bg-gray-400 h-20">
-    <nav>hi</nav>
+<body class="background-color">
+    <header class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 rounded-3xl sticky top-5 z-50">
+        <nav class="flex justify-between items-center accents-color h-20 p-5 rounded-3xl top-0 right-0 left-0">
+            <a href="#" class="text-white text-3xl font-bold">HomMi</a>
+
+            <ul class="hidden md:flex items-center space-x-10">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Card List</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Team</a></li>
+            </ul>
+
+            <a href="#"
+                class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
+                Register now
+            </a>
+        </nav>
     </header>
-    <main class="bg-gray-400 rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2  2xl:grid-col-2 gap-10 justify-items-center pl-20 pr-20">
-        <section class="w-120 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color">
-            <div><h2>Rooms Listing</h2></div>    
-            <p>Would you like me to make the “Price” label change color when the input is focused (like turning indigo to match your outline)?</p>
-            <div class="relative">
-                    <img src="./img/room8.jpg" class="w-full h-100 object-cover rounded-t-xl" alt="Image">
+    <main class="flex flex-col md:flex-row justify-center  gap-5 p-4 rounded-md">
+        <section class="text-color font-bold w-180 pt-0 overflow-hidden shadow-lg flex flex-col">
+            <div class="py-10"><h2 class="second-title-font-40">Rooms Listing</h2></div>    
+            <p class="pb-10">A charming single house with a comfortable bed, a private desk, and a large window overlooking
+                 a peaceful garden. Includes fast Wi-Fi and access to a shared modern kitchen. Perfect for quiet study or a relaxing stay</p>
+            <div class="px-10">
+                    <img src="./img/room8.jpg" class="w-full h-120 object-cover rounded-xl shadow-xl/30 z-0" alt="Image">
             </div>
-            <div><h2>All room in the whole house </h2></div>
-            <div class="grid grid-cols-3 grid-rows-2 gap-3">
-                <div class="flex flex-col gap-4">
-                    <img src="./img/Living room.jpg" class="w-full h-50 object-cover rounded-t-xl" alt="">
+            <div class="py-10 mx-auto"><h2 class="main-title-font-36">All room in the whole house </h2></div>
+            <div class="grid grid-cols-3 grid-rows-2 gap-5">
+                <div class="flex flex-col gap-3 items-center px-5">
+                    <img src="./img/Living room.jpg" class="w-full h-50 object-cover shadow-lg shadow-[0_0_10px_4px_rgba(107,114,128,0.5)] shadow-gray-500/50" alt="">
                     <span>Living room</span>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="flex flex-col gap-3 items-center px-5">
+                    <img src="./img/bathroom.jpg" class="w-full h-50 object-cover shadow-lg shadow-[0_0_10px_4px_rgba(107,114,128,0.5)] shadow-gray-500/50" alt="">
+                    <span>Bathroom</span>
+                </div>
+                <div class="flex flex-col gap-3 items-center px-5">
+                    <img src="./img/Kitchen.jpg" class="w-full h-50 object-cover shadow-lg shadow-[0_0_10px_4px_rgba(107,114,128,0.5)] shadow-gray-500/50" alt="">
+                    <span>Kitchen room</span>
+                </div>
+                <div class="flex flex-col gap-3 items-center px-5">
+                    <img src="./img/children room.jpg" class="w-full h-50 object-cover shadow-lg shadow-[0_0_10px_4px_rgba(107,114,128,0.5)] shadow-gray-500/50" alt="">
+                    <span>Children room</span>
+                </div>
+                <div class="flex flex-col gap-3 items-center px-5">
+                    <img src="./img/Living room.jpg" class="w-full h-50 object-cover shadow-lg shadow-[0_0_10px_4px_rgba(107,114,128,0.5)] shadow-gray-500/50" alt="">
+                    <span>Living room</span>
+                </div>
+                <div class="flex flex-col gap-3 items-center px-5">
+                    <img src="./img/Parking.jpg" class="w-full h-50 object-cover shadow-lg shadow-[0_0_10px_4px_rgba(107,114,128,0.5)] shadow-gray-500/50" alt="">
+                    <span>Parking</span>
+                </div>
             </div>
 
                 
         </section>
-        <section class="background-color">
+        <section class="background-color flex flex-col gap-10 pt-20">
             <div class="accents-color text-color w-90 p-10 rounded-lg border border-grey-300 shadow-lg">
                 <div class="flex flex-col w-full gap-4">
                     <h3 class="text-3xl font-medium">Service Details</h3>
@@ -83,11 +114,11 @@
                 </div>
             </div>
             <div class="bg-grey flex justify-between px-5 font-medium text-color normal-title-font-18">
-                <button class="secondary-color px-8 py-2 rounded-2xl outline-2">Booking</button>
-                <button class="background-color px-8 py-2 rounded-2xl outline-2">Contact us</button>
+                <button class="secondary-color px-10 py-2 rounded-2xl">Booking</button>
+                <button class="background-color px-8 py-2 rounded-2xl outline-1">Contact us</button>
             </div>
 
-            <div class="flex flex-col accents-color p-10 w-90 border rounded-lg shadow-lg text-color border-grey-300 gap-5">
+            <div class="flex flex-col accents-color p-10 w-90 border rounded-lg shadow-lg text-color border-grey-300 gap-5 sm:gap-2">
                 <div class="flex items-center gap-5">
                     <img src="./img/Me.jpg" class="w-20 h-20 rounded-2xl " alt="">
                     <div class="flex flex-col">
@@ -142,8 +173,105 @@
     
 
     </main>
-    <footer class="bg-gray-400 h-20">hi
+    <footer class="mt-24 pb-8">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-white text-2xl font-bold mb-4">Clarity</h3>
+                    <p class="text-gray-400 text-sm mb-2">Cambodia,</p>
+                    <p class="text-gray-400 text-sm mb-2">Phnom Penh</p>
+                    <p class="text-gray-400 text-sm mb-2">Phone: (+855) 12345678</p>
+                    <p class="text-gray-400 text-sm mb-4">Email: rentroom@business.kh.com</p>
+                    <div class="flex space-x-3">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-solid fa-phone-volume fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-telegram fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-linkedin-in fa-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Useful Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">About us</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Service</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of
+                                services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
+                                policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Verified
+                                Listing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Neighborhood
+                                Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Landlord
+                                Connect</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Roommate
+                                Matching</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Popular Areas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Toul Kork</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Toul
+                                Tompong</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Boeung Kak</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Russian
+                                Market</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Doun Penh</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Student Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">How to Rent
+                                Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Student Safety
+                                Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Roommate
+                                F.A.Q</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-classNames">Moving
+                                Checklist</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center text-gray-500 text-xs pt-8 mt-12 border-t border-gray-700/50">
+                Copyright 2025 Rent Room. All rights reserved.
+            </div>
+
+        </div>
     </footer>
 </body>
 </html>
