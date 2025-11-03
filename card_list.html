@@ -4,34 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card page</title>
-    <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/**6.5.1**/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta name="description" content="Welcome to HomMi, a simple, modern platform to find, manage, and rent homes with ease. Explore rooms, check availability, and connect instantly">
+  <meta name="keywords" content="HomMi, home rental, room for rent, housing, Cambodia, apartments, smart rent">
+  <meta name="author" content="Group 1 - Web Design ISTAD">
+
+  <!-- Open Graph (for social sharing like Facebook, Messenger) -->
+  <meta property="og:title" content="HomMi | Your Smart Home & Rental Platform">
+  <meta property="og:description" content="Find and manage your next home easily with HomMi. Clean design, smart features, and quick access to the best rentals.">
+  <meta property="og:image" content="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/home_water.png">
+  <meta property="og:type" content="website">
+
+  <!-- Styles -->
+  <link href="./src/output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/home_water.png">
 
 </head>
 <body class="text-color background-color">
-    <header class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 rounded-3xl sticky top-5 z-50">
-        <nav class="flex justify-between items-center accents-color h-20 p-5 rounded-3xl top-0 right-0 left-0">
-            <a href="#" class="text-white text-3xl font-bold">HomMi</a>
+        <header class="sticky top-0 z-50 mt-7">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between accents-color h-17 p-5 rounded-3xl top-5 right-0 left-0 items-center py-6">
+                <!-- Logo -->
+                <a href="#" class="text-white text-3xl font-bold">HomMi</a>
 
-            <ul class="hidden md:flex items-center space-x-10">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Card List</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Team</a></li>
-            </ul>
+                <div class="hidden md:flex items-center space-x-10">
+                    <!-- Desktop Links -->
+                    <ul class="flex items-center space-x-10 normal-title-font-18">
+                        <li><a href="index.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Home</a></li>
+                        <li><a href="card_list.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Card List</a></li>
+                        <li><a href="about.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">About</a></li>
+                        <li><a href="contact.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Contact</a></li>
+                        <li><a href="team.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Team</a></li>
+                    </ul>
 
-            <a href="#"
-                class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
-                Register now
-            </a>
-        </nav>
+                    <!-- Desktop Register Button -->
+                    <a href="register.html"
+                        class="secondary-color text-white px-6 py-2 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
+                        Register now
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="text-white p-2 rounded-md focus:outline-none focus:bg-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger Icon -->
+                        <i class="fa-solid fa-bars fa-xl"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full background-color shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="card_list.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Card
+                    List</a>
+                <!-- Active mobile link -->
+                <a href="about.html" class="mobile-nav-link-active block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
+                <a href="team.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Team</a>
+            </div>
+            <!-- Mobile Register Button -->
+            <div class="p-4 border-t border-gray-700">
+                <a href="register.html"
+                    class="block w-full text-center bg-indigo-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
+                    Register now
+                </a>
+            </div>
+        </div>
     </header>
+
+
+
 
     <main class="grid grid-flow-row-dense grid-flow-cols-3 gap-4 p-5">
         <!-- title page -->
@@ -83,7 +139,7 @@
         <!-- card 1 -->
         <div class="w-80 h-110 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color"> 
                 <div class="relative">
-                    <img src="./img/room8.jpg" class="w-full h-50 object-cover rounded-t-xl" alt="Image">
+                    <img src="./img/room8.jpg" href="card_detail.html" class="w-full h-50 object-cover rounded-t-xl" alt="Image">
                 </div>
 
                 <div class="p-4 flex flex-col gap-1"> 
@@ -108,9 +164,9 @@
 
                      <div class="grid grid-cols-2 gap-2 mt-2"> 
                         
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="contact.html">contact</a></div>
                         
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="card_detail.html">see more -></a></div>
                     </div>
                 </div>
             </div>
@@ -143,9 +199,9 @@
 
                     <div class="grid grid-cols-2 gap-2 mt-2"> 
                         
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="contact.html">contact</a></div>
                         
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="card_detail.html">see more -></a></div>
                     </div>
                 </div>
             </div>
@@ -178,9 +234,9 @@
 
                     <div class="grid grid-cols-2 gap-2 mt-2"> 
                         
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="contact.html">contact</a></div>
                         
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="card_detail.html">see more -></a></div>
                     </div>
                 </div>
             </div>
@@ -197,7 +253,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
                 <div class="md:col-span-2 lg:col-span-1">
-                    <h3 class="text-white text-2xl font-bold mb-4">Clarity</h3>
+                    <h3 class="text-white text-2xl font-bold mb-4">HomMi</h3>
                     <p class="text-gray-400 text-sm mb-2">Cambodia,</p>
                     <p class="text-gray-400 text-sm mb-2">Phnom Penh</p>
                     <p class="text-gray-400 text-sm mb-2">Phone: (+855) 12345678</p>
@@ -225,14 +281,14 @@
                 <div>
                     <h4 class="text-white text-base font-semibold mb-5">Useful Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">About us</a>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">About us</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Service</a>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Service</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of
                                 services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
                                 policy</a></li>
                     </ul>
                 </div>
@@ -291,6 +347,18 @@
 
         </div>
     </footer>
+
+    
+    <!-- work with responsive navigation -->
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>

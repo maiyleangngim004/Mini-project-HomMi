@@ -16,28 +16,70 @@
 
 </head>
 <body class="text-color background-color">
-    <header class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 rounded-3xl sticky top-5 z-50">
-        <nav class="flex justify-between items-center accents-color h-20 p-5 rounded-3xl top-0 right-0 left-0">
-            <a href="#" class="text-white text-3xl font-bold">HomMi</a>
+        <header class="sticky top-0 z-50 mt-7">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between accents-color h-17 p-5 rounded-3xl top-5 right-0 left-0 items-center py-6">
+                <!-- Logo -->
+                <a href="#" class="text-white text-3xl font-bold">HomMi</a>
 
-            <ul class="hidden md:flex items-center space-x-10">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Card List</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Team</a></li>
-            </ul>
+                <div class="hidden md:flex items-center space-x-10">
+                    <!-- Desktop Links -->
+                    <ul class="flex items-center space-x-10 normal-title-font-18">
+                        <li><a href="index.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Home</a></li>
+                        <li><a href="card_list.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Card List</a></li>
+                        <li><a href="about.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">About</a></li>
+                        <li><a href="contact.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Contact</a></li>
+                        <li><a href="team.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Team</a></li>
+                    </ul>
 
-            <a href="#"
-                class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
-                Register now
-            </a>
-        </nav>
+                    <!-- Desktop Register Button -->
+                    <a href="register.html"
+                        class="inline-block bg-indigo-600 text-white px-7 py-2 rounded-full font-md text-lg hover:bg-indigo-900 transition-all duration-300">
+                        Register now
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="text-white p-2 rounded-md focus:outline-none focus:bg-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger Icon -->
+                        <i class="fa-solid fa-bars fa-xl"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full background-color shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="card_list.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Card
+                    List</a>
+                <!-- Active mobile link -->
+                <a href="about.html" class="mobile-nav-link-active block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
+                <a href="team.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Team</a>
+            </div>
+            <!-- Mobile Register Button -->
+            <div class="p-4 border-t border-gray-700">
+                <a href="register.html"
+                        class="inline-block bg-indigo-600 text-white px-7 py-2 rounded-full font-md text-lg hover:bg-indigo-900 transition-all duration-300">
+                        Register
+                    </a>
+            </div>
+        </div>
     </header>
+
+
+
     <main class="flex flex-col md:flex-row justify-center  gap-5 p-4 rounded-md">
-        <section class="text-color font-bold w-180 pt-0 overflow-hidden shadow-lg flex flex-col">
-            <div class="py-10"><h2 class="second-title-font-40">Rooms Listing</h2></div>    
-            <p class="pb-10">A charming single house with a comfortable bed, a private desk, and a large window overlooking
+        <section class="text-color w-180 pt-0 overflow-hidden shadow-lg flex flex-col">
+            <div class="py-10"><h2 class="second-title-font-40 font-lg">Rooms Listing</h2></div>    
+            <p class="px-10 pb-10">A charming single house with a comfortable bed, a private desk, and a large window overlooking
                  a peaceful garden. Includes fast Wi-Fi and access to a shared modern kitchen. Perfect for quiet study or a relaxing stay</p>
             <div class="px-10">
                     <img src="./img/room8.jpg" class="w-full h-120 object-cover rounded-xl shadow-xl/30 z-0" alt="Image">
@@ -114,9 +156,16 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-grey flex justify-between px-5 font-medium text-color normal-title-font-18">
-                <button class="secondary-color px-10 py-2 rounded-2xl">Booking</button>
-                <button class="background-color px-8 py-2 rounded-2xl outline-1">Contact us</button>
+            <div class="bg-grey flex justify-between px-5 items-center font-medium text-color normal-title-font-18">
+                <a href="contact.html"
+                        class="inline-block bg-indigo-600 text-white px-10 py-2 rounded-2xl font-md text-lg hover:bg-indigo-900 transition-all duration-300">
+                        Booking
+                </a>
+                <!-- <button class="background-color px-8 py-2 rounded-2xl outline-1">Contact us</button> -->
+                <a href="contact.html"
+                        class="inline-block border text-color px-7 py-2 rounded-2xl outline-1 font-semibold text-lg hover:bg-indigo-600  hover:text-white hover:outline-none transition-all duration-300 ">
+                        Contact us
+                    </a>
             </div>
 
             <div class="flex flex-col accents-color p-10 w-90 border rounded-lg shadow-lg text-color border-grey-300 gap-5 sm:gap-2">
@@ -129,10 +178,7 @@
                     </div>
                     
                 </div>
-                <p class="description-font-14">Describe the quality of the bed and pillows, seating
-                     options (e.g., a comfortable chair and desk), 
-                     and the general ambiance. Mention effective temperature 
-                     control (A/C or heating) and soundproofing from outside.</p>
+                <p class="description-font-14">"For common areas like the kitchen and bathroom, let's make sure we both clean up after ourselves to keep things tidy for everyone. Maybe we can come up with a small cleaning schedule together?".</p>
             </div>     
             <div class="flex flex-col accents-color p-10 w-90 border rounded-lg shadow-lg text-color border-grey-300 gap-1 justify-center">
                 <div class="flex justify-center">
@@ -144,29 +190,32 @@
                 <div class="flex flex-col gap-1 w-full">
                     <div class="mt-2">
                         <div class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500">
-                            <input id="price" type="text" name="price" placeholder="0.00" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
+                            <input id="price" type="text" name="price" placeholder="Your name" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
                         </div>
                     </div>
                     <div class="mt-2">
                         <div class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500">
-                            <input id="price" type="text" name="price" placeholder="0.00" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
+                            <input id="price" type="text" name="price" placeholder="Your email" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
                         </div>
                     </div>
                     <div class="mt-2">
                         <div class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500">
-                            <input id="price" type="text" name="price" placeholder="0.00" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
+                            <input id="price" type="text" name="price" placeholder="Your room id" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col">
                     <div class="mt-2 pb-5">
                         <div class="flex items-center rounded-md bg-white/5 pl-3 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500">
-                            <input id="price" type="text" name="price" placeholder="0.00" class="block min-w-0 grow py-20 pt-0 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
+                            <input id="price" type="text" name="price" placeholder="Your questions" class="block min-w-0 grow py-20 pt-0 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <button class=" p-2 rounded-lg secondary-color text-color ">Send Message<i class="fa-solid fa-paper-plane bg-white-500 px-2"></i></button>
+                    <a href="contact.html"
+                        class="inline-block bg-indigo-600 text-white px-10 py-2 rounded-lg font-md hover:bg-indigo-900 transition-all duration-300">
+                        Send Message<i class="fa-solid fa-paper-plane bg-white-500 px-2"></i>
+                </a>
                 </div>
             </div>       
             
@@ -180,7 +229,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
                 <div class="md:col-span-2 lg:col-span-1">
-                    <h3 class="text-white text-2xl font-bold mb-4">Clarity</h3>
+                    <h3 class="text-white text-2xl font-bold mb-4">HomMi</h3>
                     <p class="text-gray-400 text-sm mb-2">Cambodia,</p>
                     <p class="text-gray-400 text-sm mb-2">Phnom Penh</p>
                     <p class="text-gray-400 text-sm mb-2">Phone: (+855) 12345678</p>
@@ -208,14 +257,14 @@
                 <div>
                     <h4 class="text-white text-base font-semibold mb-5">Useful Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">About us</a>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">About us</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Service</a>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Service</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of
                                 services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
                                 policy</a></li>
                     </ul>
                 </div>
@@ -274,5 +323,20 @@
 
         </div>
     </footer>
+
+    
+    <!-- work with responsive navigation -->
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+</script>
 </body>
 </html>
