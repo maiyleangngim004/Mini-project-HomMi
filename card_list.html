@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card page</title>
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/**6.5.1**/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="text-color background-color">
+    <header class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 rounded-3xl sticky top-5 z-50">
+        <nav class="flex justify-between items-center accents-color h-20 p-5 rounded-3xl top-0 right-0 left-0">
+            <a href="#" class="text-white text-3xl font-bold">HomMi</a>
+
+            <ul class="hidden md:flex items-center space-x-10">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Card List</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Team</a></li>
+            </ul>
+
+            <a href="#"
+                class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
+                Register now
+            </a>
+        </nav>
+    </header>
+
+    <main class="grid grid-flow-row-dense grid-flow-cols-3 gap-4 p-5">
+        <!-- title page -->
+        <aside class="h-20">
+            <h2 class="description-color second-title-font-40 flex justify-center items-center font-bold pt-7">Rooms Listing</h2>
+        </aside>
+
+        <!-- choosing location -->
+        <section class="h-15 grid grid-flow-row-dense grid-cols-6 gap-3 p-4 rounded-md">
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Toul Kok
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Boeng Keng Kang
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Dangkan
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Preak Ta Sek
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Chroy Changvar
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Doun Penh
+            </a>
+
+            
+        </section>
+
+
+        <!-- search location -->
+        <div class="flex flex-col">
+            <div class="mx-6 mt-2 pb-5">
+                <div class="flex items-center rounded-md pl-3 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500 gap-3"><i class="fa-solid fa-magnifying-glass description-color"></i>
+                    <input id="location" type="text" name="location" placeholder="Search your location" class="block min-w-0 grow py-3 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
+                </div>
+            </div>
+        </div>
+        <!-- card section -->
+        <section class="rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 justify-items-center pl-20 pr-20">
+        <!-- card 1 -->
+        <div class="w-80 h-110 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color"> 
+                <div class="relative">
+                    <img src="./img/room8.jpg" class="w-full h-50 object-cover rounded-t-xl" alt="Image">
+                </div>
+
+                <div class="p-4 flex flex-col gap-1"> 
+                    
+                    <div class="flex justify-between items-center">
+                        
+                        <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color background-color"> 
+                            Room-1
+                        </div>
+                        
+                        <div class="flex items-center text-sm font-semibold">
+                            <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
+                            <span class="text-yellow-500">4.6</span>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-lg text-color">Mansion</h3>
+                    
+                    <p class="smallest-font-12 leading-relaxed description-color">
+                        Describe the quality of the bed and pillows, seating options (e.g., a comfortable chair and desk), and the general ambiance. Mention effective temperature control (A/C or heating) and soundproofing from outside or neighboring rooms.
+                    </p>
+
+                     <div class="grid grid-cols-2 gap-2 mt-2"> 
+                        
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
+                        
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="w-80 h-110 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color"> 
+                <div class="relative">
+                    <img src="./img/room8.jpg" class="w-full h-50 object-cover rounded-t-xl" alt="Image">
+                </div>
+
+                <div class="p-4 flex flex-col gap-1"> 
+                    
+                    <div class="flex justify-between items-center">
+                        
+                        <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color background-color"> 
+                            Room-1
+                        </div>
+                        
+                        <div class="flex items-center text-sm font-semibold">
+                            <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
+                            <span class="text-yellow-500">4.6</span>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-lg text-color">Mansion</h3>
+                    
+                    <p class="smallest-font-12 leading-relaxed description-color">
+                        Describe the quality of the bed and pillows, seating options (e.g., a comfortable chair and desk), and the general ambiance. Mention effective temperature control (A/C or heating) and soundproofing from outside or neighboring rooms.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-2 mt-2"> 
+                        
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
+                        
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="w-80 h-110 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color"> 
+                <div class="relative">
+                    <img src="./img/room8.jpg" class="w-full h-50 object-cover rounded-t-xl" alt="Image">
+                </div>
+
+                <div class="p-4 flex flex-col gap-1"> 
+                    
+                    <div class="flex justify-between items-center">
+                        
+                        <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color background-color"> 
+                            Room-1
+                        </div>
+                        
+                        <div class="flex items-center text-sm font-semibold">
+                            <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
+                            <span class="text-yellow-500">4.6</span>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-lg text-color">Mansion</h3>
+                    
+                    <p class="smallest-font-12 leading-relaxed description-color">
+                        Describe the quality of the bed and pillows, seating options (e.g., a comfortable chair and desk), and the general ambiance. Mention effective temperature control (A/C or heating) and soundproofing from outside or neighboring rooms.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-2 mt-2"> 
+                        
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
+                        
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="mt-24 pb-8">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-white text-2xl font-bold mb-4">Clarity</h3>
+                    <p class="text-gray-400 text-sm mb-2">Cambodia,</p>
+                    <p class="text-gray-400 text-sm mb-2">Phnom Penh</p>
+                    <p class="text-gray-400 text-sm mb-2">Phone: (+855) 12345678</p>
+                    <p class="text-gray-400 text-sm mb-4">Email: rentroom@business.kh.com</p>
+                    <div class="flex space-x-3">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-solid fa-phone-volume fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-telegram fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook fa-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-linkedin-in fa-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Useful Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">About us</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Service</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of
+                                services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
+                                policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Verified
+                                Listing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Neighborhood
+                                Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Landlord
+                                Connect</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Roommate
+                                Matching</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Popular Areas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Toul Kork</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Toul
+                                Tompong</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Boeung Kak</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Russian
+                                Market</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Doun Penh</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-base font-semibold mb-5">Student Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">How to Rent
+                                Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Student Safety
+                                Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Roommate
+                                F.A.Q</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-classNames">Moving
+                                Checklist</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center text-gray-500 text-xs pt-8 mt-12 border-t border-gray-700/50">
+                Copyright 2025 Rent Room. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

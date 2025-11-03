@@ -19,17 +19,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="backgroud-color-bg text-color">
+<body class="background-color text-color">
 
+    <!-- header -->
+    
+
+    <!-- main -->
     <main class="min-h-screen grid grid-cols-1 md:grid-cols-2">
 
-        <div class="hidden md:flex items-center justify-center p-12">
-            <img src="./images/registerlogo.svg" alt="registerlogo" class="w-full max-w-md">
+        <div class="md:flex items-center justify-center p-12">
+            <img src="./img/Login-Register.png" alt="registerlogo" class="w-full max-w-md">
         </div>
 
         <div class="flex items-center justify-center p-8 md:p-12">
             
-            <form action="/register" method="POST" class="accents-color-bg p-10 rounded-2xl shadow-2xl w-full max-w-lg">
+            <form action="/register" method="POST" class=" p-10 rounded-2xl accents-color shadow-2xl w-full max-w-lg">
                 
                 <h2 class="normal-title-font-18 description-color font-light">Get start now with</h2>
                 <h1 class="main-title-font-36 secondary-color-text font-bold mb-8">HomMi</h1>
@@ -112,20 +116,22 @@
     </main>
 
     <script>
-        document.querySelectorAll('.password-toggle').forEach(icon => {
-            icon.addEventListener('click', () => {
-                const input = icon.previousElementSibling;
-                
-                if (input.type === 'password') {
-                    input.type = 'text';
-                    icon.classList.remove('fa-eye');
-                    icon.classList.add('fa-eye-slash');
-                } else {
-                    input.type = 'password';
-                    icon.classList.remove('fa-eye-slash');
-                    icon.classList.add('fa-eye');
-                }
-     </script>
+    document.querySelectorAll('.password-toggle').forEach(icon => {
+        icon.addEventListener('click', () => {
+            const input = icon.previousElementSibling;
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }); 
+    }); 
+</script>
 
 </body>
 </html>
