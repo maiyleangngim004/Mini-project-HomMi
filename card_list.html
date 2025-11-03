@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/**6.5.1**/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body class="primary-color">
-    <header class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 rounded-3xl">
-        <nav class="flex justify-between items-center background-color h-20 p-5 rounded-3xl">
+<body class="text-color background-color">
+    <header class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 rounded-3xl sticky top-5 z-50">
+        <nav class="flex justify-between items-center accents-color h-20 p-5 rounded-3xl top-0 right-0 left-0">
             <a href="#" class="text-white text-3xl font-bold">HomMi</a>
 
             <ul class="hidden md:flex items-center space-x-10">
@@ -35,27 +35,51 @@
 
     <main class="grid grid-flow-row-dense grid-flow-cols-3 gap-4 p-5">
         <!-- title page -->
-        <aside class="bg-black h-20">
-            <h2 class="description-color second-title-font-40 flex justify-center items-center font-bold">Rooms Listing</h2>
+        <aside class="h-20">
+            <h2 class="description-color second-title-font-40 flex justify-center items-center font-bold pt-7">Rooms Listing</h2>
         </aside>
 
         <!-- choosing location -->
-        <section class="bg-gray-200 h-15 grid grid-flow-row-dense grid-cols-6 gap-3 p-2 rounded-md">
-            <div class="accents-color text-color normal-title-font-18 flex justify-center items-center rounded-3xl">Toul Kok</div>
-            <div class="accents-color text-color normal-title-font-18 flex justify-center items-center rounded-3xl">Boeng Keng Kang</div>
-            <div class="accents-color text-color normal-title-font-18 flex justify-center items-center rounded-3xl">Dangkan</div>
-            <div class="accents-color text-color normal-title-font-18 flex justify-center items-center rounded-3xl">Preak Ta Sek</div>
-            <div class="accents-color text-color normal-title-font-18 flex justify-center items-center rounded-3xl">Chroy Changvar</div>
-            <div class="accents-color text-color normal-title-font-18 flex justify-center items-center rounded-3xl">Doun Penh</div>
+        <section class="h-15 grid grid-flow-row-dense grid-cols-6 gap-3 p-4 rounded-md">
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Toul Kok
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Boeng Keng Kang
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Dangkan
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Preak Ta Sek
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Chroy Changvar
+            </a>
+            <a href="#"
+                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                Doun Penh
+            </a>
+
+            
         </section>
+
 
         <!-- search location -->
-        <section class="bg-gray-300 h-15 grid grid-flow-row-dense grid-rows-1 p-2 rounded-md">
-            <div class="accents-color description-font-14 border-1 rounded-xl p-2 flex gap-3 justify-content-center items-center p-3"><i class="fa-solid fa-magnifying-glass"></i>Search your location...</div>
-        </section>
-
+        <div class="flex flex-col">
+            <div class="mx-6 mt-2 pb-5">
+                <div class="flex items-center rounded-md pl-3 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500 gap-3"><i class="fa-solid fa-magnifying-glass description-color"></i>
+                    <input id="location" type="text" name="location" placeholder="Search your location" class="block min-w-0 grow py-3 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
+                </div>
+            </div>
+        </div>
         <!-- card section -->
-        <section class="bg-gray-400 rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 justify-items-center pl-20 pr-20">
+        <section class="rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 justify-items-center pl-20 pr-20">
         <!-- card 1 -->
         <div class="w-80 h-110 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color"> 
                 <div class="relative">
@@ -82,11 +106,11 @@
                         Describe the quality of the bed and pillows, seating options (e.g., a comfortable chair and desk), and the general ambiance. Mention effective temperature control (A/C or heating) and soundproofing from outside or neighboring rooms.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-2 mt-2"> 
+                     <div class="grid grid-cols-2 gap-2 mt-2"> 
                         
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color">contact</div>
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
                         
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color">see more -></div>
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
                     </div>
                 </div>
             </div>
@@ -119,9 +143,9 @@
 
                     <div class="grid grid-cols-2 gap-2 mt-2"> 
                         
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color">contact</div>
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
                         
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color">see more -></div>
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
                     </div>
                 </div>
             </div>
@@ -154,9 +178,9 @@
 
                     <div class="grid grid-cols-2 gap-2 mt-2"> 
                         
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color">contact</div>
+                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">contact</a></div>
                         
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color">see more -></div>
+                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="">see more -></a></div>
                     </div>
                 </div>
             </div>
