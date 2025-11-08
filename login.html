@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="background-color text-color">
+<body class="text-white bg-white dark:bg-[#05071E]">
     <!-- header -->
 
     <!-- main -->
@@ -33,12 +33,12 @@
 
         <div class="flex items-center justify-center p-20 md:p-12">
 
-            <form action="/login" method="POST" class="accents-color p-10 rounded-2xl shadow-2xl w-full max-w-lg">
+            <form action="/login" method="POST" class="dark:bg-[#0b0c2a] p-10 rounded-2xl border border-blue-500/30 shadow-lg w-full max-w-lg">
 
                 <h2 class="normal-title-font-18 description-color font-light">Welcome back to</h2>
                 <h1 class="main-title-font-36 secondary-color-text font-bold mb-8">HomMi</h1>
 
-                <div class="space-y-4 mb-6">
+                <div class="space-y-1.5 mb-6">
                     <button type="button"
                         class="primary-color-bg w-full flex items-center justify-center py-3 rounded-lg hover:opacity-90 transition duration-300">
                         <img src="https://www.google.com/favicon.ico" alt="Google" class="w-5 h-5 mr-3">
@@ -83,14 +83,15 @@
                     <div class="flex flex-col">
                         
                         <a href="#" class="smallest-font-12 text-color font-medium hover:underline">Forgot Password?</a>
-                        <a href="index.html" class="smallest-font-12 description-color hover:underline">Back</a>
                     </div>
                 </div>
 
                 <button type="submit"
-                    class="secondary-color w-full hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded-lg normal-title-font-18 transition duration-300">
+                    class="bg-indigo-600 hover:bg-indigo-800 w-full text-white font-bold py-3 px-4 rounded-lg normal-title-font-18 transition duration-300">
                     Login
                 </button>
+                <a href="index.html" class="flex justify-center pt-5 smallest-font-12 description-color hover:underline">Back</a>
+
 
                 <div class="text-center mt-6">
                     <span class="smallest-font-12 description-color">

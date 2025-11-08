@@ -16,8 +16,14 @@
 
   <!-- Styles -->
   <link href="./src/output.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
   <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
 
   <!-- Icons -->
   <link rel="stylesheet"
@@ -26,29 +32,51 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/home_water.png">
 
-</head>
-<body class="text-color background-color">
-        <header class="sticky top-0 z-50 mt-7">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <nav class="flex justify-between accents-color h-17 p-5 rounded-3xl top-5 right-0 left-0 items-center py-6">
-                <!-- Logo -->
-                <a href="#" class="text-white text-3xl font-bold">HomMi</a>
 
-                <div class="hidden md:flex items-center space-x-10">
+</head>
+<body class="text-gray-200 bg-white dark:bg-[#05071E]">
+    <header class="sticky top-0 z-50 mt-7">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 md:px-7 lg:px-8">
+            <nav class="flex justify-between bg-[#524DD3] dark:bg-[#1B1933] rounded-3xl top-5 right-0 left-0 items-center py-4 px-4 md:gap-3 lg:gap-3">
+                <!-- Logo -->
+                <a href="index.html" class="text-white text-3xl font-bold">HomMi</a>
+
+                <div class="hidden md:flex items-center gap-5 md:gap-2 xl:gap-5">
                     <!-- Desktop Links -->
-                    <ul class="flex items-center space-x-10 normal-title-font-18">
-                        <li><a href="index.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Home</a></li>
-                        <li><a href="card_list.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Card List</a></li>
-                        <li><a href="about.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">About</a></li>
-                        <li><a href="contact.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Contact</a></li>
-                        <li><a href="team.html" class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Team</a></li>
+                    <ul class="flex items-center sm:gap-2 md:gap-2 lg:gap-8 xl:gap-8 normal-title-font-18">
+                        <li><a href="index.html"
+                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Home</a>
+                        </li>
+                        <li><a href="card_list.html"
+                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Card
+                                List</a></li>
+                        <li><a href="about.html"
+                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">About</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Contact</a>
+                        </li>
+                        <li><a href="team.html"
+                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Team</a>
+                        </li>
                     </ul>
 
                     <!-- Desktop Register Button -->
                     <a href="register.html"
-                        class="secondary-color text-white px-6 py-2 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
+                        class="bg-indigo-900 dark:bg-indigo-700 text-lg text-white px-6 py-2 md:text-md md:px-4 rounded-full font-semibold hover:bg-indigo-700 dark:hover:bg-indigo-900 transition-all duration-300">
                         Register now
                     </a>
+
+                    <!-- Toggle Button -->
+
+                    <div id="toggleBtn"
+                        class="relative w-18 h-10 bg-gray-200 rounded-full flex items-center justify-between px-2 cursor-pointer gap-2 transition-colors duration-300">
+                        <i class="fa-solid fa-sun text-orange-300 text-xl"></i>
+                        <i class="fa-solid fa-moon text-gray-500 text-xl"></i>
+                        <div class="absolute top-1 left-1 w-8 h-8 bg-[#524DD3] rounded-full transition-all duration-300"
+                            id="circle">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="md:hidden">
@@ -62,7 +90,9 @@
             </nav>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full background-color shadow-xl">
+        <!-- when the screen is small -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 w-full bg-[#524DD3] dark:bg-[#1B1933] shadow-xl">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
@@ -70,16 +100,27 @@
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Card
                     List</a>
                 <!-- Active mobile link -->
-                <a href="about.html" class="mobile-nav-link-active block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="about.html"
+                    class="mobile-nav-link-active block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-700">About</a>
                 <a href="contact.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
                 <a href="team.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Team</a>
             </div>
+            <!-- Toggle Button -->
+
+            <div id="mobile-menu"
+                class="relative w-20 h-10 bg-gray-200 rounded-full flex items-center gap-2 justify-between px-2 cursor-pointer transition-colors duration-300">
+                <i class="fa-solid fa-sun text-orange-300 text-2xl"></i>
+                <i class="fa-solid fa-moon text-gray-500 text-2xl"></i>
+                <div class="absolute top-1 left-1 w-8 h-8 bg-[#524DD3] rounded-full transition-all duration-300"
+                    id="circle-mobile">
+                </div>
+            </div>
             <!-- Mobile Register Button -->
             <div class="p-4 border-t border-gray-700">
                 <a href="register.html"
-                    class="block w-full text-center bg-indigo-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300">
+                    class="inline-block bg-indigo-900 text-white px-6 py-3 rounded-full font-semibold text-lg hover:bg-indigo-600 transition-all duration-300">
                     Register now
                 </a>
             </div>
@@ -92,33 +133,33 @@
     <main class="grid grid-flow-row-dense grid-flow-cols-3 gap-4 p-5">
         <!-- title page -->
         <aside class="h-20">
-            <h2 class="description-color second-title-font-40 flex justify-center items-center font-bold pt-7">Rooms Listing</h2>
+            <h2 class="text-black dark:text-white description-color second-title-font-40 flex justify-center items-center pt-7">Rooms Listing</h2>
         </aside>
 
         <!-- choosing location -->
-        <section class="h-15 grid grid-flow-row-dense grid-cols-6 gap-3 p-4 rounded-md">
+        <section class="h-15 grid grid-flow-row-dense grid-cols-6 gap-4 p-5 rounded-md">
             <a href="#"
-                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                class="py-2 bg-indigo-700 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg text-white hover:text-gray-700 dark:text-white dark:hover:bg-indigo-700 description-font-14 flex justify-center items-center rounded-full hover:bg-gray-300 transition-all duration-300">
                 Toul Kok
             </a>
             <a href="#"
-                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                class="py-2 bg-indigo-700 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg text-white hover:text-gray-700 dark:text-white dark:hover:bg-indigo-700 description-font-14 flex justify-center items-center rounded-full hover:bg-gray-300 transition-all duration-300">
                 Boeng Keng Kang
             </a>
             <a href="#"
-                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                class="py-2 bg-indigo-700 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg text-white hover:text-gray-700 dark:text-white dark:hover:bg-indigo-700 description-font-14 flex justify-center items-center rounded-full hover:bg-gray-300 transition-all duration-300">
                 Dangkan
             </a>
             <a href="#"
-                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                class="py-2 bg-indigo-700 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg text-white hover:text-gray-700 dark:text-white dark:hover:bg-indigo-700 description-font-14 flex justify-center items-center rounded-full hover:bg-gray-300 transition-all duration-300">
                 Preak Ta Sek
             </a>
             <a href="#"
-                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                class="py-2 bg-indigo-700 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg text-white hover:text-gray-700 dark:text-white dark:hover:bg-indigo-700 description-font-14 flex justify-center items-center rounded-full hover:bg-gray-300 transition-all duration-300">
                 Chroy Changvar
             </a>
             <a href="#"
-                class="accents-color text-color description-font-14 flex justify-center items-center rounded-full hover:bg-indigo-700 transition-all duration-300">
+                class="py-2 bg-indigo-700 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg text-white hover:text-gray-700 dark:text-white dark:hover:bg-indigo-700 description-font-14 flex justify-center items-center rounded-full hover:bg-gray-300 transition-all duration-300">
                 Doun Penh
             </a>
 
@@ -129,121 +170,92 @@
         <!-- search location -->
         <div class="flex flex-col">
             <div class="mx-6 mt-2 pb-5">
-                <div class="flex items-center rounded-md pl-3 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500 gap-3"><i class="fa-solid fa-magnifying-glass description-color"></i>
-                    <input id="location" type="text" name="location" placeholder="Search your location" class="block min-w-0 grow py-3 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6" />
-                </div>
+                <form class="flex items-center bg-gray-100 rounded-full pl-3 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500 gap-3 border border-gray-500 focus:outline-none focus:border-blue-500/30">
+                    <i class="fa-solid fa-magnifying-glass description-color"></i><input id="location" type="text" name="location" placeholder="Search your location" class="block bg-gray-100 min-w-0 grow py-3 text-base text-black placeholder:text-gray-500 focus:outline-none rounded-full sm:text-sm/6" />
+                </form>
             </div>
         </div>
         <!-- card section -->
-        <section class="rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 justify-items-center pl-20 pr-20">
+        <section class="rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center px-10 py-8">
+
         <!-- card 1 -->
-        <div class="w-80 h-110 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color"> 
-                <div class="relative">
-                    <img src="./img/room8.jpg" href="card_detail.html" class="w-full h-50 object-cover rounded-t-xl" alt="Image">
-                </div>
+        <div class="w-80 rounded-2xl overflow-hidden bg-gray-100 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg flex flex-col">
+            <div class="relative w-full h-60">
+            <img src="./img/room8.jpg" class="w-full h-full object-cover" alt="Room 1">
+            </div>
 
-                <div class="p-4 flex flex-col gap-1"> 
-                    
-                    <div class="flex justify-between items-center">
-                        
-                        <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color background-color"> 
-                            Room-1
-                        </div>
-                        
-                        <div class="flex items-center text-sm font-semibold">
-                            <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
-                            <span class="text-yellow-500">4.6</span>
-                        </div>
-                    </div>
-
-                    <h3 class="font-bold text-lg text-color">Mansion</h3>
-                    
-                    <p class="smallest-font-12 leading-relaxed description-color">
-                        Describe the quality of the bed and pillows, seating options (e.g., a comfortable chair and desk), and the general ambiance. Mention effective temperature control (A/C or heating) and soundproofing from outside or neighboring rooms.
-                    </p>
-
-                     <div class="grid grid-cols-2 gap-2 mt-2"> 
-                        
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="contact.html">contact</a></div>
-                        
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="card_detail.html">see more -></a></div>
-                    </div>
+            <div class="p-4 flex flex-col gap-2">
+            <div class="flex justify-between items-center text-black dark:text-[#D9D9D9]">
+                <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color bg-indigo-700">Room-1</div>
+                <div class="flex items-center text-sm font-semibold">
+                <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
+                <span class="text-yellow-500">4.6</span>
                 </div>
             </div>
 
-            <!-- card 2 -->
-            <div class="w-80 h-110 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color"> 
-                <div class="relative">
-                    <img src="./img/room8.jpg" class="w-full h-50 object-cover rounded-t-xl" alt="Image">
-                </div>
+            <h3 class="font-bold text-lg text-black dark:text-[#D9D9D9]">Modern Student Apartment</h3>
 
-                <div class="p-4 flex flex-col gap-1"> 
-                    
-                    <div class="flex justify-between items-center">
-                        
-                        <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color background-color"> 
-                            Room-1
-                        </div>
-                        
-                        <div class="flex items-center text-sm font-semibold">
-                            <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
-                            <span class="text-yellow-500">4.6</span>
-                        </div>
-                    </div>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-[#C3C7CB]">
+                A cozy, air-conditioned room ideal for focused study and rest. Furnished with a soft single bed, sturdy study desk, and ergonomic chair. Reliable high-speed Wi-Fi and quiet surroundings make it perfect for university students who value comfort and productivity. 
+            </p>
 
-                    <h3 class="font-bold text-lg text-color">Mansion</h3>
-                    
-                    <p class="smallest-font-12 leading-relaxed description-color">
-                        Describe the quality of the bed and pillows, seating options (e.g., a comfortable chair and desk), and the general ambiance. Mention effective temperature control (A/C or heating) and soundproofing from outside or neighboring rooms.
-                    </p>
+            <div class="grid grid-cols-2 gap-2 mt-3">
+                <a href="contact.html" class="bg-indigo-700 hover:bg-[#05071E] transition-all duration-300 flex justify-center items-center h-8 text-xs rounded-lg text-white">Contact</a>
+                <a href="card_detail.html" class="bg-indigo-700 hover:bg-[#05071E] transition-all duration-300 flex justify-center items-center h-8 text-xs rounded-lg text-white">See more →</a>
+            </div>
+            </div>
+        </div>
 
-                    <div class="grid grid-cols-2 gap-2 mt-2"> 
-                        
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="contact.html">contact</a></div>
-                        
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="card_detail.html">see more -></a></div>
-                    </div>
+        <!-- Repeat cards -->
+        <div class="w-80 rounded-2xl overflow-hidden bg-gray-100 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg flex flex-col">
+            <div class="relative w-full h-60">
+            <img src="./img/sample house.jpg" class="w-full h-full object-cover" alt="Room 2">
+            </div>
+            <div class="p-4 flex flex-col gap-2">
+            <div class="flex justify-between items-center text-black dark:text-[#D9D9D9]">
+                <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color bg-indigo-700">Room-2</div>
+                <div class="flex items-center text-sm font-semibold">
+                <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
+                <span class="text-yellow-500">4.6</span>
                 </div>
             </div>
+            <h3 class="font-bold text-lg text-black dark:text-[#D9D9D9]">Spacious Shared Unit</h3>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-[#C3C7CB]">
+                Bright and spacious student room featuring a large window with natural light, a comfortable bed, wardrobe, and private workspace. Located near major universities in Phnom Penh with easy access to local food stalls and laundry services.
+            </p>
+            <div class="grid grid-cols-2 gap-2 mt-3">
+                <a href="contact.html" class="bg-indigo-700 hover:bg-[#05071E] transition-all duration-300 flex justify-center items-center h-8 text-xs rounded-lg text-white">Contact</a>
+                <a href="card_detail.html" class="bg-indigo-700 hover:bg-[#05071E] transition-all duration-300 flex justify-center items-center h-8 text-xs rounded-lg text-white">See more →</a>
+            </div>
+            </div>
+        </div>
 
-            <!-- card 3 -->
-            <div class="w-80 h-110 rounded-xl overflow-hidden shadow-lg flex flex-col accents-color"> 
-                <div class="relative">
-                    <img src="./img/room8.jpg" class="w-full h-50 object-cover rounded-t-xl" alt="Image">
-                </div>
-
-                <div class="p-4 flex flex-col gap-1"> 
-                    
-                    <div class="flex justify-between items-center">
-                        
-                        <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color background-color"> 
-                            Room-1
-                        </div>
-                        
-                        <div class="flex items-center text-sm font-semibold">
-                            <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
-                            <span class="text-yellow-500">4.6</span>
-                        </div>
-                    </div>
-
-                    <h3 class="font-bold text-lg text-color">Mansion</h3>
-                    
-                    <p class="smallest-font-12 leading-relaxed description-color">
-                        Describe the quality of the bed and pillows, seating options (e.g., a comfortable chair and desk), and the general ambiance. Mention effective temperature control (A/C or heating) and soundproofing from outside or neighboring rooms.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-2 mt-2"> 
-                        
-                        <div class=" background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="contact.html">contact</a></div>
-                        
-                        <div class="background-color flex justify-center items-center h-8 text-xs rounded-lg text-color"><a href="card_detail.html">see more -></a></div>
-                    </div>
+        <!-- card 3 -->
+        <div class="w-80 rounded-2xl overflow-hidden bg-gray-100 dark:bg-[#0b0c2a] border border-blue-500/30 shadow-lg flex flex-col">
+            <div class="relative w-full h-60">
+            <img src="./img/sample-house2.jpg" class="w-full h-full object-cover" alt="Room 3">
+            </div>
+            <div class="p-4 flex flex-col gap-2">
+            <div class="flex justify-between items-center text-black dark:text-[#D9D9D9]">
+                <div class="px-2 py-1 rounded-lg text-xs font-semibold text-color bg-indigo-700">Room-3</div>
+                <div class="flex items-center text-sm font-semibold">
+                <i class="fa-solid fa-star mr-1 text-yellow-500"></i>
+                <span class="text-yellow-500">4.6</span>
                 </div>
             </div>
-
-            
+            <h3 class="font-bold text-lg text-black dark:text-[#D9D9D9]">Budget-Friendly Studio</h3>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-[#C3C7CB]">
+                Affordable and fully furnished room with a clean, modern design. Includes fan or A/C for a cool atmosphere. Quiet neighborhood with 24-hour security and nearby convenience stores—ideal for students who want a peaceful place to study and relax after class.
+            </p>
+            <div class="grid grid-cols-2 gap-2 mt-3">
+                <a href="contact.html" class="bg-indigo-700 hover:bg-[#05071E] transition-all duration-300 flex justify-center items-center h-8 text-xs rounded-lg text-white">Contact</a>
+                <a href="card_detail.html" class="bg-indigo-700 hover:bg-[#05071E] transition-all duration-300 flex justify-center items-center h-8 text-xs rounded-lg text-white">See more →</a>
+            </div>
+            </div>
+        </div>
 
         </section>
+
     </main>
 
     <!-- footer -->
@@ -253,112 +265,161 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
                 <div class="md:col-span-2 lg:col-span-1">
-                    <h3 class="text-white text-2xl font-bold mb-4">HomMi</h3>
-                    <p class="text-gray-400 text-sm mb-2">Cambodia,</p>
-                    <p class="text-gray-400 text-sm mb-2">Phnom Penh</p>
-                    <p class="text-gray-400 text-sm mb-2">Phone: (+855) 12345678</p>
-                    <p class="text-gray-400 text-sm mb-4">Email: rentroom@business.kh.com</p>
+                    <h3 class="text-[#1B1933] dark:text-white text-2xl font-bold mb-4">HomMi</h3>
+                    <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">Cambodia,</p>
+                    <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">Phnom Penh</p>
+                    <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">Phone: (+855) 12345678</p>
+                    <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-4">Email: rentroom@business.kh.com</p>
                     <div class="flex space-x-3">
                         <a href="#"
-                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
                             <i class="fa-solid fa-phone-volume fa-xl"></i>
                         </a>
                         <a href="#"
-                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
                             <i class="fa-brands fa-telegram fa-xl"></i>
                         </a>
                         <a href="#"
-                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
                             <i class="fa-brands fa-facebook fa-xl"></i>
                         </a>
                         <a href="#"
-                            class="w-8 h-8 rounded-full bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
                             <i class="fa-brands fa-linkedin-in fa-xl"></i>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="text-white text-base font-semibold mb-5">Useful Links</h4>
+                    <h4 class="text-[#1B1933] dark:text-white text-base font-semibold mb-5">Useful Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">About us</a>
+                        <li><a href="index.html"
+                                class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">About
+                                us</a>
                         </li>
-                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Service</a>
+                        <li><a href="index.html"
+                                class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Service</a>
                         </li>
-                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of
+                        <li><a href="index.html" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Terms
+                                of
                                 services</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
+                        <li><a href="contact.html"
+                                class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Privacy
                                 policy</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-white text-base font-semibold mb-5">Our Services</h4>
+                    <h4 class="text-[#1B1933] dark:text-white text-base font-semibold mb-5">Our Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Verified
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Verified
                                 Listing</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Neighborhood
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Neighborhood
                                 Guides</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Landlord
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Landlord
                                 Connect</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Roommate
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Roommate
                                 Matching</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-white text-base font-semibold mb-5">Popular Areas</h4>
+                    <h4 class="text-[#1B1933] dark:text-white text-base font-semibold mb-5">Popular Areas</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Toul Kork</a>
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Toul Kork</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Toul
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Toul
                                 Tompong</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Boeung Kak</a>
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Boeung Kak</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Russian
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Russian
                                 Market</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Doun Penh</a>
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Doun Penh</a>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-white text-base font-semibold mb-5">Student Resources</h4>
+                    <h4 class="text-[#1B1933] dark:text-white text-base font-semibold mb-5">Student Resources</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">How to Rent
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">How to Rent
                                 Guide</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Student Safety
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Student Safety
                                 Tips</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Roommate
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Roommate
                                 F.A.Q</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-classNames">Moving
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-classNames">Moving
                                 Checklist</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</a>
+                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Contact Us</a>
                         </li>
                     </ul>
                 </div>
 
             </div>
 
-            <div class="text-center text-gray-500 text-xs pt-8 mt-12 border-t border-gray-700/50">
+            <div class="text-center text-[#1B1933] dark:text-gray-500 text-xs pt-8 mt-12 border-t border-gray-700/50">
                 Copyright 2025 Rent Room. All rights reserved.
             </div>
 
         </div>
     </footer>
 
-    
+</body>
+
     <!-- work with responsive navigation -->
     <script>
         // JavaScript for mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
     </script>
 
-</body>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById("toggleBtn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const circleDesktop = document.getElementById("circle"); // Desktop circle
+    const circleMobile = document.getElementById("circle-mobile"); // Mobile circle
+    const html = document.documentElement;
+
+    // Load saved theme
+    if (localStorage.theme === "dark") {
+        html.classList.add("dark");
+        circleDesktop.classList.add("translate-x-8");
+        circleMobile.classList.add("translate-x-8"); // Also update mobile circle
+    }
+
+    function toggleTheme() {
+        const isDark = html.classList.toggle("dark");
+        localStorage.theme = isDark ? "dark" : "light";
+        
+        // Update both circles
+        circleDesktop.classList.toggle("translate-x-8");
+        circleMobile.classList.toggle("translate-x-8");
+    }
+
+    toggleBtn.addEventListener("click", toggleTheme);
+    mobileMenu.addEventListener("click", toggleTheme);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      // Highlight the active page
+      link.classList.remove("text-gray-300");
+      link.classList.add("text-white", "underline");
+    }
+  });
+});
+</script>
+
 </html>
