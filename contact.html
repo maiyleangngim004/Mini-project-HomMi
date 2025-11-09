@@ -1,391 +1,633 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact page</title>
-  <meta name="description" content="Welcome to HomMi, a simple, modern platform to find, manage, and rent homes with ease. Explore rooms, check availability, and connect instantly">
-  <meta name="keywords" content="HomMi, home rental, room for rent, housing, Cambodia, apartments, smart rent">
-  <meta name="author" content="Group 1 - Web Design ISTAD">
+    <meta
+      name="description"
+      content="Welcome to HomMi, a simple, modern platform to find, manage, and rent homes with ease. Explore rooms, check availability, and connect instantly"
+    />
+    <meta
+      name="keywords"
+      content="HomMi, home rental, room for rent, housing, Cambodia, apartments, smart rent"
+    />
+    <meta name="author" content="Group 1 - Web Design ISTAD" />
 
-  <!-- Open Graph (for social sharing like Facebook, Messenger) -->
-  <meta property="og:title" content="HomMi | Your Smart Home & Rental Platform">
-  <meta property="og:description" content="Find and manage your next home easily with HomMi. Clean design, smart features, and quick access to the best rentals.">
-  <meta property="og:image" content="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/home_water.png">
-  <meta property="og:type" content="website">
+    <meta
+      property="og:title"
+      content="HomMi | Your Smart Home & Rental Platform"
+    />
+    <meta
+      property="og:description"
+      content="Find and manage your next home easily with HomMi. Clean design, smart features, and quick access to the best rentals."
+    />
+    <meta
+      property="og:image"
+      content="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/home_water.png"
+    />
+    <meta property="og:type" content="website" />
 
-  <!-- Styles -->
-  <link href="./src/output.css" rel="stylesheet">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-  <link rel="stylesheet" href="style.css">
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
+      tailwind.config = {
+        darkMode: "class",
+      };
     </script>
 
-  <!-- Icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="shortcut icon" href="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/home_water.png">
-
-
-</head>
-<body class="text-gray-200 bg-white dark:bg-[#05071E]">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/home_water.png"
+    />
+  </head>
+  <body class="text-gray-200 bg-white dark:bg-[#05071E]">
     <header class="sticky top-0 z-50 mt-7">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 md:px-7 lg:px-8">
-            <nav class="flex justify-between bg-[#524DD3] dark:bg-[#1B1933] rounded-3xl top-5 right-0 left-0 items-center py-4 px-4 md:gap-3 lg:gap-3">
-                <!-- Logo -->
-                <a href="index.html" class="text-white text-3xl font-bold">HomMi</a>
+      <div class="container mx-auto max-w-7xl px-4 sm:px-6 md:px-7 lg:px-8">
+        <nav
+          class="flex justify-between bg-[#524DD3] dark:bg-[#1B1933] rounded-3xl top-5 right-0 left-0 items-center py-4 px-4 md:gap-3 lg:gap-3"
+        >
+          <a href="index.html" class="text-white text-3xl font-bold">HomMi</a>
 
-                <div class="hidden md:flex items-center gap-5 md:gap-2 xl:gap-5">
-                    <!-- Desktop Links -->
-                    <ul class="flex items-center sm:gap-2 md:gap-2 lg:gap-8 xl:gap-8 normal-title-font-18">
-                        <li><a href="index.html"
-                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Home</a>
-                        </li>
-                        <li><a href="card_list.html"
-                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Card
-                                List</a></li>
-                        <li><a href="about.html"
-                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">About</a>
-                        </li>
-                        <li><a href="contact.html"
-                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Contact</a>
-                        </li>
-                        <li><a href="team.html"
-                                class="nav-link text-gray-300 hover:text-white hover:underline transition-colors">Team</a>
-                        </li>
-                    </ul>
+          <div class="hidden md:flex items-center gap-5 md:gap-2 xl:gap-5">
+            <ul
+              class="flex items-center sm:gap-2 md:gap-2 lg:gap-8 xl:gap-8 normal-title-font-18"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="nav-link text-gray-300 hover:text-white hover:underline transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="card_list.html"
+                  class="nav-link text-gray-300 hover:text-white hover:underline transition-colors"
+                  >Card List</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="nav-link text-gray-300 hover:text-white hover:underline transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="nav-link text-gray-300 hover:text-white hover:underline transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="team.html"
+                  class="nav-link text-gray-300 hover:text-white hover:underline transition-colors"
+                  >Team</a
+                >
+              </li>
+            </ul>
 
-                    <!-- Desktop Register Button -->
-                    <a href="register.html"
-                        class="bg-indigo-900 dark:bg-indigo-700 text-lg text-white px-6 py-2 md:text-md md:px-4 rounded-full font-semibold hover:bg-indigo-700 dark:hover:bg-indigo-900 transition-all duration-300">
-                        Register now
-                    </a>
+            <a
+              href="register.html"
+              class="bg-indigo-900 dark:bg-indigo-700 text-lg text-white px-6 py-2 md:text-md md:px-4 rounded-full font-semibold hover:bg-indigo-700 dark:hover:bg-indigo-900 transition-all duration-300"
+            >
+              Register now
+            </a>
 
-                    <!-- Toggle Button -->
+            <div
+              id="toggleBtn"
+              class="relative w-18 h-10 bg-gray-200 rounded-full flex items-center justify-between px-2 cursor-pointer gap-2 transition-colors duration-300"
+            >
+              <i class="fa-solid fa-sun text-orange-300 text-xl"></i>
+              <i class="fa-solid fa-moon text-gray-500 text-xl"></i>
+              <div
+                class="absolute top-1 left-1 w-8 h-8 bg-[#524DD3] rounded-full transition-all duration-300"
+                id="circle"
+              ></div>
+            </div>
+          </div>
 
-                    <div id="toggleBtn"
-                        class="relative w-18 h-10 bg-gray-200 rounded-full flex items-center justify-between px-2 cursor-pointer gap-2 transition-colors duration-300">
-                        <i class="fa-solid fa-sun text-orange-300 text-xl"></i>
-                        <i class="fa-solid fa-moon text-gray-500 text-xl"></i>
-                        <div class="absolute top-1 left-1 w-8 h-8 bg-[#524DD3] rounded-full transition-all duration-300"
-                            id="circle">
-                        </div>
-                    </div>
-                </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white p-2 rounded-md focus:outline-none focus:bg-gray-700"
+            >
+              <span class="sr-only">Open main menu</span>
+              <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
 
-                <div class="md:hidden">
-                    <button id="mobile-menu-button"
-                        class="text-white p-2 rounded-md focus:outline-none focus:bg-gray-700">
-                        <span class="sr-only">Open main menu</span>
-                        <!-- Hamburger Icon -->
-                        <i class="fa-solid fa-bars fa-xl"></i>
-                    </button>
-                </div>
-            </nav>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 right-0 w-full bg-[#524DD3] dark:bg-[#1B1933] shadow-xl"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Home</a
+          >
+          <a
+            href="card_list.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Card List</a
+          >
+          <a
+            href="about.html"
+            class="mobile-nav-link-active block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-700"
+            >About</a
+          >
+          <a
+            href="contact.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Contact</a
+          >
+          <a
+            href="team.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Team</a
+          >
         </div>
-
-        <!-- when the screen is small -->
-        <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 right-0 w-full bg-[#524DD3] dark:bg-[#1B1933] shadow-xl">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
-                <a href="card_list.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Card
-                    List</a>
-                <!-- Active mobile link -->
-                <a href="about.html"
-                    class="mobile-nav-link-active block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-700">About</a>
-                <a href="contact.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
-                <a href="team.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Team</a>
-            </div>
-            <!-- Toggle Button -->
-
-            <div id="mobile-menu"
-                class="relative w-20 h-10 bg-gray-200 rounded-full flex items-center gap-2 justify-between px-2 cursor-pointer transition-colors duration-300">
-                <i class="fa-solid fa-sun text-orange-300 text-2xl"></i>
-                <i class="fa-solid fa-moon text-gray-500 text-2xl"></i>
-                <div class="absolute top-1 left-1 w-8 h-8 bg-[#524DD3] rounded-full transition-all duration-300"
-                    id="circle-mobile">
-                </div>
-            </div>
-            <!-- Mobile Register Button -->
-            <div class="p-4 border-t border-gray-700">
-                <a href="register.html"
-                    class="inline-block bg-indigo-900 text-white px-6 py-3 rounded-full font-semibold text-lg hover:bg-indigo-600 transition-all duration-300">
-                    Register now
-                </a>
-            </div>
+        <div
+          id="mobile-menu"
+          class="relative w-20 h-10 bg-gray-200 rounded-full flex items-center gap-2 justify-between px-2 cursor-pointer transition-colors duration-300"
+        >
+          <i class="fa-solid fa-sun text-orange-300 text-2xl"></i>
+          <i class="fa-solid fa-moon text-gray-500 text-2xl"></i>
+          <div
+            class="absolute top-1 left-1 w-8 h-8 bg-[#524DD3] rounded-full transition-all duration-300"
+            id="circle-mobile"
+          ></div>
         </div>
+        <div class="p-4 border-t border-gray-700">
+          <a
+            href="register.html"
+            class="inline-block bg-indigo-900 text-white px-6 py-3 rounded-full font-semibold text-lg hover:bg-indigo-600 transition-all duration-300"
+          >
+            Register now
+          </a>
+        </div>
+      </div>
     </header>
 
-
-
-
     <main class="grid grid-flow-row-dense grid-flow-cols-3 gap-4 p-5">
-        <section>
-            <!-- Contact Section -->
-            <div class="px-6 md:px-20 py-16">
-                <h2 class="text-[#1B1933] dark:text-gray-200 text-3xl font-semibold text-center mb-10">Contact</h2>
+      <section>
+        <div class="px-6 md:px-20 py-16">
+          <h2
+            class="text-[#1B1933] dark:text-gray-200 text-3xl font-semibold text-center mb-10"
+          >
+            Contact
+          </h2>
 
-                <div class="grid md:grid-cols-2 gap-10">
+          <div class="grid md:grid-cols-2 gap-10">
+            <div
+              class="bg-gray-100 dark:bg-[#0b0c2a] p-8 rounded-2xl border border-blue-500/30 shadow-lg"
+            >
+              <div
+                class="flex justify-center py-8 text-black dark:text-gray-200"
+              >
+                <i class="fa-solid fa-comment"></i>
+              </div>
+              <h3
+                class="text-black dark:text-gray-200 text-xl font-semibold text-center mb-4"
+              >
+                Let's Start a Conversation
+              </h3>
+              <p class="text-black dark:text-gray-400 text-center mb-8">
+                Whether you're new to the city or just looking for a better
+                place to stay, our platform makes it easy to compare locations,
+                prices, and facilities all in one place.
+              </p>
 
-                    <!-- Left Card (Form) -->
-                    <div class="bg-gray-100 dark:bg-[#0b0c2a] p-8 rounded-2xl border border-blue-500/30 shadow-lg">
-                        <div class="flex justify-center py-8 text-black dark:text-gray-200">
-                            <i class="fa-solid fa-comment"></i>
-                        </div>
-                        <h3 class="text-black dark:text-gray-200 text-xl font-semibold text-center mb-4">Let's Start a Conversation</h3>
-                        <p class="text-black dark:text-gray-400 text-center mb-8">
-                            Whether you're new to the city or just looking for a better place to stay, our platform makes it easy to compare locations, prices, and facilities all in one place.
-                        </p>
-
-                        <form class="space-y-4">
-                            <div class="flex gap-4">
-                                <input type="text" placeholder="Your Name"
-                                    class="w-1/2 text-black p-3 rounded-md bg-gray-100 dark:bg-[#0b0c2a] border border-gray-500 focus:outline-none focus:border-blue-500/30" />
-                                <input type="email" placeholder="Email Address"
-                                    class="w-1/2 text-black p-3 rounded-md bg-gray-100 dark:bg-[#0b0c2a] border border-gray-500 focus:outline-none focus:border-blue-500/30" />
-                            </div>
-                            <input type="text" placeholder="What's this about?"
-                                class="w-full text-black p-3 rounded-md bg-gray-100 dark:bg-[#0b0c2a] border border-gray-500 focus:outline-none focus:border-blue-500/30" />
-                            <textarea placeholder="Tell us more about your project..." rows="4"
-                                class="w-full text-black p-3 rounded-md bg-gray-100 dark:bg-[#0b0c2a] border border-gray-500 focus:outline-none focus:border-blue-500/30"></textarea>
-
-                            <button type="submit"
-                                class="w-full bg-indigo-600 hover:bg-indigo-900 py-3 rounded-md font-semibold hover:opacity-90 flex items-center justify-center gap-2">
-                                Send Message
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-
-                    <!-- Right Info Section -->
-                    <div class="flex flex-col space-y-6">
-
-                        <div>
-                            <h3 class="text-[#1B1933] dark:text-gray-200 text-2xl font-semibold mb-2">Ready to Transform Your Ideas?</h3>
-                            <p class="text-[#1B1933] dark:text-gray-400">
-                                We help students discover safe, affordable, and comfortable rooms near their universities.
-                            </p>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="bg-gray-100 text-[#1B1933] dark:bg-[#0b0c2a] dark:text-white p-4 rounded-lg border border-blue-500/20">
-                                <h4 class=" font-semibold mb-1">Email Us</h4>
-                                <p class="text-gray-500 dark:text-gray-500 text-sm">hello@productdesign.com</p>
-                            </div>
-
-                            <div class="bg-gray-100 text-[#1B1933] dark:bg-[#0b0c2a] dark:text-white p-4 rounded-lg border border-blue-500/20">
-                                <h4 class="font-semibold mb-1">Call Us</h4>
-                                <p class="text-gray-500 dark:text-gray-500 text-sm">+1 (855) 987-6543</p>
-                                <p class="text-gray-500 dark:text-gray-500 text-xs">Available 24/7</p>
-                            </div>
-
-                            <div class="bg-gray-100 text-[#1B1933] dark:bg-[#0b0c2a] dark:text-white p-4 rounded-lg border border-blue-500/20">
-                                <h4 class="font-semibold mb-1">Visit Our Office</h4>
-                                <p class="text-gray-500 dark:text-gray-500 text-sm">4821 Broadway Street, New York, NY 10013</p>
-                                <p class="text-gray-500 dark:text-gray-500 text-xs">Open Monday - Friday</p>
-                            </div>
-
-
-                            <div
-                                class="flex justify-between bg-gray-100 dark:bg-[#0b0c2a] p-4 rounded-lg border border-blue-500/20 text-center text-sm">
-                                <div>
-                                    <p class="text-indigo-600 dark:text-blue-400 font-bold text-lg">24h</p>
-                                    <p class="text-[#1B1933] dark:text-gray-500">Average Response</p>
-                                </div>
-                                <div>
-                                    <p class="text-indigo-600 dark:text-blue-400 font-bold text-lg">90%</p>
-                                    <p class="text-[#1B1933] dark:text-gray-500">Client Satisfaction</p>
-                                </div>
-                                <div>
-                                    <p class="text-indigo-600 dark:text-blue-400 font-bold text-lg">150+</p>
-                                    <p class="text-[#1B1933] dark:text-gray-500">Projects Delivered</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+              <form class="space-y-4">
+                <div class="flex gap-4">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    class="w-1/2 text-black dark:text-gray-200 p-3 rounded-md bg-gray-100 dark:bg-[#0b0c2a] border border-gray-500 focus:outline-none focus:border-blue-500/30"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-1/2 text-black dark:text-gray-200 p-3 rounded-md bg-gray-100 dark:bg-[#0b0c2a] border border-gray-500 focus:outline-none focus:border-blue-500/30"
+                  />
                 </div>
+                <input
+                  type="text"
+                  placeholder="What's this about?"
+                  class="w-full text-black dark:text-gray-200 p-3 rounded-md bg-gray-100 dark:bg-[#0b0c2a] border border-gray-500 focus:outline-none focus:border-blue-500/30"
+                />
+                <textarea
+                  placeholder="Tell us more about your project..."
+                  rows="4"
+                  class="w-full text-black dark:text-gray-200 p-3 rounded-md bg-gray-100 dark:bg-[#0b0c2a] border border-gray-500 focus:outline-none focus:border-blue-500/30"
+                ></textarea>
+
+                <button
+                  type="submit"
+                  class="w-full bg-indigo-600 hover:bg-indigo-900 py-3 rounded-md font-semibold hover:opacity-90 flex items-center justify-center gap-2"
+                >
+                  Send Message
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </button>
+              </form>
             </div>
-        </section>
+
+            <div class="flex flex-col space-y-6">
+              <div>
+                <h3
+                  class="text-[#1B1933] dark:text-gray-200 text-2xl font-semibold mb-2"
+                >
+                  Ready to Transform Your Ideas?
+                </h3>
+                <p class="text-[#1B1933] dark:text-gray-400">
+                  We help students discover safe, affordable, and comfortable
+                  rooms near their universities.
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <div
+                  class="bg-gray-100 text-[#1B1933] dark:bg-[#0b0c2a] dark:text-white p-4 rounded-lg border border-blue-500/20"
+                >
+                  <h4 class="font-semibold mb-1">Email Us</h4>
+                  <p class="text-gray-500 dark:text-gray-500 text-sm">
+                    rentroom@business.kh.com
+                  </p>
+                </div>
+
+                <div
+                  class="bg-gray-100 text-[#1B1933] dark:bg-[#0b0c2a] dark:text-white p-4 rounded-lg border border-blue-500/20"
+                >
+                  <h4 class="font-semibold mb-1">Call Us</h4>
+                  <p class="text-gray-500 dark:text-gray-500 text-sm">
+                    (+855) 12345678
+                  </p>
+                  <p class="text-gray-500 dark:text-gray-500 text-xs">
+                    Available 24/7
+                  </p>
+                </div>
+
+                <div
+                  class="bg-gray-100 text-[#1B1933] dark:bg-[#0b0c2a] dark:text-white p-4 rounded-lg border border-blue-500/20"
+                >
+                  <h4 class="font-semibold mb-1">Visit Our Office</h4>
+                  <p class="text-gray-500 dark:text-gray-500 text-sm">
+                    Phnom Penh, Cambodia
+                  </p>
+                  <p class="text-gray-500 dark:text-gray-500 text-xs">
+                    Open Monday - Friday
+                  </p>
+                </div>
+
+                <div
+                  class="flex justify-between bg-gray-100 dark:bg-[#0b0c2a] p-4 rounded-lg border border-blue-500/20 text-center text-sm"
+                >
+                  <div>
+                    <p
+                      class="text-indigo-600 dark:text-blue-400 font-bold text-lg"
+                    >
+                      24h
+                    </p>
+                    <p class="text-[#1B1933] dark:text-gray-500">
+                      Average Response
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      class="text-indigo-600 dark:text-blue-400 font-bold text-lg"
+                    >
+                      90%
+                    </p>
+                    <p class="text-[#1B1933] dark:text-gray-500">
+                      Client Satisfaction
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      class="text-indigo-600 dark:text-blue-400 font-bold text-lg"
+                    >
+                      150+
+                    </p>
+                    <p class="text-[#1B1933] dark:text-gray-500">
+                      Projects Delivered
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- footer -->
     <footer class="mt-24 pb-8">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-
-                <div class="md:col-span-2 lg:col-span-1">
-                    <h3 class="text-[#1B1933] dark:text-white text-2xl font-bold mb-4">HomMi</h3>
-                    <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">Cambodia,</p>
-                    <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">Phnom Penh</p>
-                    <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">Phone: (+855) 12345678</p>
-                    <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-4">Email: rentroom@business.kh.com</p>
-                    <div class="flex space-x-3">
-                        <a href="#"
-                            class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
-                            <i class="fa-solid fa-phone-volume fa-xl"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
-                            <i class="fa-brands fa-telegram fa-xl"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
-                            <i class="fa-brands fa-facebook fa-xl"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
-                            <i class="fa-brands fa-linkedin-in fa-xl"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-[#1B1933] dark:text-white text-base font-semibold mb-5">Useful Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="index.html"
-                                class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">About
-                                us</a>
-                        </li>
-                        <li><a href="index.html"
-                                class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Service</a>
-                        </li>
-                        <li><a href="index.html" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Terms
-                                of
-                                services</a></li>
-                        <li><a href="contact.html"
-                                class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Privacy
-                                policy</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-[#1B1933] dark:text-white text-base font-semibold mb-5">Our Services</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Verified
-                                Listing</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Neighborhood
-                                Guides</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Landlord
-                                Connect</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Roommate
-                                Matching</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-[#1B1933] dark:text-white text-base font-semibold mb-5">Popular Areas</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Toul Kork</a>
-                        </li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Toul
-                                Tompong</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Boeung Kak</a>
-                        </li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Russian
-                                Market</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Doun Penh</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-[#1B1933] dark:text-white text-base font-semibold mb-5">Student Resources</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">How to Rent
-                                Guide</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Student Safety
-                                Tips</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Roommate
-                                F.A.Q</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-classNames">Moving
-                                Checklist</a></li>
-                        <li><a href="#" class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-
+      <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+          <div class="md:col-span-2 lg:col-span-1">
+            <h3 class="text-[#1B1933] dark:text-white text-2xl font-bold mb-4">
+              HomMi
+            </h3>
+            <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">
+              Cambodia,
+            </p>
+            <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">
+              Phnom Penh
+            </p>
+            <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-2">
+              Phone: (+855) 12345678
+            </p>
+            <p class="text-[#1B1933] dark:text-gray-400 text-sm mb-4">
+              Email: rentroom@business.kh.com
+            </p>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors"
+              >
+                <i class="fa-solid fa-phone-volume fa-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors"
+              >
+                <i class="fa-brands fa-telegram fa-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors"
+              >
+                <i class="fa-brands fa-facebook fa-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-[#524DD3] dark:bg-gray-700 hover:bg-indigo-600 flex items-center justify-center transition-colors"
+              >
+                <i class="fa-brands fa-linkedin-in fa-xl"></i>
+              </a>
             </div>
+          </div>
 
-            <div class="text-center text-[#1B1933] dark:text-gray-500 text-xs pt-8 mt-12 border-t border-gray-700/50">
-                Copyright 2025 Rent Room. All rights reserved.
-            </div>
+          <div>
+            <h4
+              class="text-[#1B1933] dark:text-white text-base font-semibold mb-5"
+            >
+              Useful Links
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >About us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Terms of services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Privacy policy</a
+                >
+              </li>
+            </ul>
+          </div>
 
+          <div>
+            <h4
+              class="text-[#1B1933] dark:text-white text-base font-semibold mb-5"
+            >
+              Our Services
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Verified Listing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Neighborhood Guides</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Landlord Connect</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Roommate Matching</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-[#1B1933] dark:text-white text-base font-semibold mb-5"
+            >
+              Popular Areas
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Toul Kork</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Toul Tompong</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Boeung Kak</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Russian Market</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Doun Penh</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-[#1B1933] dark:text-white text-base font-semibold mb-5"
+            >
+              Student Resources
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >How to Rent Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Student Safety Tips</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Roommate F.A.Q</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-classNames"
+                  >Moving Checklist</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#1B1933] dark:text-gray-400 hover:underline dark:hover:text-white text-sm transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div
+          class="text-center text-[#1B1933] dark:text-gray-500 text-xs pt-8 mt-12 border-t border-gray-700/50"
+        >
+          Copyright 2025 Rent Room. All rights reserved.
+        </div>
+      </div>
     </footer>
+  </body>
 
-</body>
-
-    <!-- work with responsive navigation -->
-    <script>
-        // JavaScript for mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-
-    <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById("toggleBtn");
+  <script>
+    // JavaScript for mobile menu toggle
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
-    const circleDesktop = document.getElementById("circle"); // Desktop circle
-    const circleMobile = document.getElementById("circle-mobile"); // Mobile circle
-    const html = document.documentElement;
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 
-    // Load saved theme
-    if (localStorage.theme === "dark") {
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("toggleBtn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const circleDesktop = document.getElementById("circle"); // Desktop circle
+      const circleMobile = document.getElementById("circle-mobile"); // Mobile circle
+      const html = document.documentElement;
+
+      // Load saved theme
+      if (localStorage.theme === "dark") {
         html.classList.add("dark");
         circleDesktop.classList.add("translate-x-8");
         circleMobile.classList.add("translate-x-8"); // Also update mobile circle
-    }
+      }
 
-    function toggleTheme() {
+      function toggleTheme() {
         const isDark = html.classList.toggle("dark");
         localStorage.theme = isDark ? "dark" : "light";
-        
+
         // Update both circles
         circleDesktop.classList.toggle("translate-x-8");
         circleMobile.classList.toggle("translate-x-8");
-    }
+      }
 
-    toggleBtn.addEventListener("click", toggleTheme);
-    mobileMenu.addEventListener("click", toggleTheme);
-});
-</script>
+      toggleBtn.addEventListener("click", toggleTheme);
+      mobileMenu.addEventListener("click", toggleTheme);
+    });
+  </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = window.location.pathname.split("/").pop();
-  const navLinks = document.querySelectorAll(".nav-link");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-link");
 
-  navLinks.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === currentPage) {
-      // Highlight the active page
-      link.classList.remove("text-gray-300");
-      link.classList.add("text-white", "underline");
-    }
-  });
-});
-</script>
-
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (href === currentPage) {
+          // Highlight the active page
+          link.classList.remove("text-gray-300");
+          link.classList.add("text-white", "underline");
+        }
+      });
+    });
+  </script>
 </html>
